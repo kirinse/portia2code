@@ -1,4 +1,4 @@
-six==1.10.0
-slybot>=0.13.0b32
-autopep8==1.2.4
-chardet==2.3.0
+six==1.15.0
+git+https://github.com/kirinse/slybot.git
+autopep8==1.5.4
+chardet==3.0.4
