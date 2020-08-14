@@ -135,7 +135,7 @@ class Number(BaseProcessor):
         for value in values:
             if isinstance(value, (dict, list)):
                 numbers.append(value)
-            txt = _NUMERIC_ENTITIES.sub(lambda m: unichr(int(m.groups()[0])),
+            txt = _NUMERIC_ENTITIES.sub(lambda m: six.unichr(int(m.groups()[0])),
                                         value)
             numbers.append(_NUMBER_RE.findall(txt))
         return list(chain(*numbers))
@@ -147,7 +147,7 @@ class Price(BaseProcessor):
         for value in values:
             if isinstance(value, (dict, list)):
                 prices.append(value)
-            txt = _NUMERIC_ENTITIES.sub(lambda m: unichr(int(m.groups()[0])),
+            txt = _NUMERIC_ENTITIES.sub(lambda m: six.unichr(int(m.groups()[0])),
                                         value)
             m = _DECIMAL_RE.search(txt)
             if m:

@@ -5,13 +5,13 @@ from portia2code import __version__ as version
 
 install_requires = [
     'Scrapy',
-    'slybot>=0.13.0', 
+    'slybot @ git+https://github.com/kirinse/slybot.git@master#egg=slybot',
     'dateparser',
-    'six==1.10.0',
+    'six==1.15.0',
     'w3lib',
-    'scrapely',
-    'autoflake==0.6.6',
-    'autopep8==1.2.2'
+    'scrapely @ git+https://github.com/kirinse/scrapely.git@master#egg=scrapely',
+    'autoflake==1.3.1',
+    'autopep8==1.5.4'
 ]
 
 setup(
